@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BurgerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
+
+Route::get('/burger',[BurgerController::class, 'index'])->name('burgers.index');
