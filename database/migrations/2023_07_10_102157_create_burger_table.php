@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('burgers', function (Blueprint $table) {
             $table->id();
-            $table->string('nazwa');
-            $table->string('rozmiar');
-            $table->string('rodzaj_bułki');
+            $table->string('Imię');
+            $table->string('Nazwisko');
+            $table->string('Rodzaj');
+            $table->string('Rozmiar');
+            $table->string('Bułka');
             $table->json('dodatki');
             $table->timestamps();
         });

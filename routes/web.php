@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
-
 Route::get('/burger',[BurgerController::class, 'index'])->name('burgers.index');
+Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
+Route::post('/burger',[BurgerController::class, 'store'])->name('burgers.store');
