@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\BurgerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\BurgerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/burger',[BurgerController::class, 'index'])->name('burgers.index');
+Route::get('/burger/menu',[MenuController::class, 'index'])->name('burgers.index');
 Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
 Route::post('/burger',[BurgerController::class, 'store'])->name('burgers.store');

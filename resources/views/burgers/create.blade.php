@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-<div>
-    <div>
+<div class="full-height">
+    <div class="wrapper">
         <h1>
             Składanie zamówenia
         </h1>
@@ -14,13 +14,7 @@
             <label for="Rodzaj">Wybierz burgera: </label>
             <select name="Rodzaj" id="Rodzaj">
                 <option value="Classic">Classic</option>
-                <option value="Pepik">Pepik</option>
-                <option value="Becon-BBQ">Becon BBQ</option>
-            </select>
-            <label for="Rozmiar">Wybierz rozmiar burgera: </label>
-            <select name="Rozmiar" id="Rozmiar">
-                <option value="M">M</option>
-                <option value="L">L</option>
+                <option value="Bebek-Junior">Bebek Junior</option>
             </select>
             <label for="Bułka">Bułka: </label>
             <select name="Bułka" id="Bułka">
@@ -39,9 +33,9 @@
             </fieldset>
             <input type="submit" value="Zamów">
         </form>
+        <a href="/">
+            <- Powrót do strony głównej
+        </a>
     </div>
-    <a href="/">
-        <- Powrót do strony głównej
-    </a>
 </div>
 @endsection

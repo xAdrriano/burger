@@ -8,7 +8,7 @@ html, body {
   }
   
   .full-height {
-    height: 90vh;
+    height: 95vh;
   }
   
   .flex-center {
@@ -20,7 +20,7 @@ html, body {
   .position-ref {
     position: relative;
   }
-  
+
   .top-right {
     position: absolute;
     right: 10px;
@@ -32,7 +32,7 @@ html, body {
   }
   
   .links > a {
-    color: #636b6f;
+    color: white;
     padding: 0 25px;
     font-size: 16px;
     font-weight: 600;
@@ -46,7 +46,7 @@ html, body {
   }
   
   footer{
-    background: #eee;
+    background: black;
     padding: 20px;
     text-align: center;
   }
@@ -56,11 +56,32 @@ html, body {
     text-transform: uppercase;
     border-bottom: 2px solid;
     padding: 12px 0;
-    color: #5e2195;
+    color: #afca0b;
   }
   
-  .wrapper{
+  .wrapper {
     max-width: 1140px;
     padding: 10px;
     margin: 20px auto;
   }
+
+  .nav {
+    background-color: black;
+    color: white;
+    height: 80px;
+    padding: 5px;
+    transition: all 0.5 ease-in-out;
+  }
+
+  .d-button {
+    padding: 8px 16px;
+    border: 2px solid #afca0b;
+    border-radius: 30px;
+    transition: all 0.5s;
+  }
+
+  .d-hover > div:hover {
+    background-color: #afca0b;
+  }
+
+  

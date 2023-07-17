@@ -11,9 +11,6 @@ class BurgerController extends Controller
         return view('burgers.create');
     }
 
-    public function index(){
-        return view('burgers.index');
-    }
 
     public function store(){
         $burger = new Burger();
@@ -27,6 +24,6 @@ class BurgerController extends Controller
             $burger->dodatki = ["brak dodatkow"];
         }
         $burger->save();
-        return redirect('/');
+        return redirect('/')->with('mssg','Dziękujemy za twoje zamównienie!');
     }
 }

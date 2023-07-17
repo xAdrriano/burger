@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('burgers', function (Blueprint $table) {
+        Schema::create('menus', function (Blueprint $table) {
             $table->id();
-            $table->string('Imię');
-            $table->string('Nazwisko');
             $table->string('Rodzaj');
-            $table->string('Rozmiar');
-            $table->string('Bułka');
-            $table->json('dodatki');
+            $table->longtext('Opis');
+            $table->double('Cena');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('burgers');
+        Schema::dropIfExists('menus');
     }
 };
