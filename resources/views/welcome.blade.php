@@ -6,8 +6,6 @@
         <div class="title m-b-md">
             Najlepsze burgiry w mieście!
         </div>
-        <a href="{{route('burgers.create')}}">Zamów</a>
-        <a href="{{route('burgers.index')}}">Menu</a>
         @if(session()->has('mssg'))
             <p>{{session('mssg')}}</p>
         @endif

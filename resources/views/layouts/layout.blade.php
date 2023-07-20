@@ -10,13 +10,15 @@
         <link rel="icon" type="image/x-icon" href="/img/logo-burger.png">
     </head>
     <body>
-      <div class="nav links flex-center">
+      <div class="nav links flex-center" id="return-to-top">
           <a href="/">
             <img src="/img/logo-burger.png" width="30" height="30" alt="burger">
           </a>
-          <a href="/burger/menu">
-            MENU
-          </a>
+              <a href="/burger/menu">
+                <div class="m-button">
+                MENU
+              </div>
+              </a>
             <div class="d-hover">
               <div class="d-button links">
                 <a href="/burger/zamow">
@@ -25,10 +27,15 @@
               </div>
             </div>
           </div>
+            <div class="arrow">
+              <a href="#return-to-top">
+                <img src="/img/up-arrow.png"  width="80" src="do-góry">
+              </a>
+          </div>
       @yield('content')
       <footer>
         <a href="/">
-          <img src="/img/logo-burger.png" width="30" height="30" alt="">
+          <img src="/img/logo-burger.png" width="30" height="30" alt="logo">
         </a>
         <p>Copyright 2023 Burgir | Made by Adrian</p>
       </footer>
