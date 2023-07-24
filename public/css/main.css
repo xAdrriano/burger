@@ -15,6 +15,7 @@ html, body {
     height: 95vh;
   }
   
+
   .flex-center {
     align-items: center;
     display: flex;
@@ -45,8 +46,13 @@ html, body {
     text-transform: uppercase;
   }
   
-  .m-b-md {
-    margin-bottom: 30px;
+  .z {
+    margin: 30px;
+    display: grid;
+  }
+
+  .z > label {
+    padding-top: 15px;
   }
   
   footer{
@@ -136,7 +142,7 @@ html, body {
 
   .arrow {
     position: absolute;
-    margin: 10px;
+    margin-left: 7%;
     margin-top: 35%;
     display: block;
   }
@@ -148,4 +154,60 @@ html, body {
     border-radius: 100%;
     transition: all 5s ease;
   }
+
+  .back > a{
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 35%;
+    display: block;
+  }
+
+  .back > a {
+    position: fixed;
+    background-color: #afca0b;
+    padding: 10px;
+    border-radius: 100%;
+    transition: all 5s ease;
+  }
+
+  .g {
+    background: #F4F4F4; 
+    border: solid #afca0b 2px;
+    border-radius: 10% / 20%;
+    height: 40vh;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
+  .dodatki {
+    border: 2px solid #afca0b;
+    border-radius: 15px;
+    background-color: #F1F1f1;
+    padding: 20px;
+  }
+
+  .button {
+    padding: 20px;
+  }
+
+  .button > input {
+    border: 2px solid #afca0b;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: right ;
+    margin-right: 30px;
+  }
+
+  .button > input:hover {
+    background-color: #afca0b;
+    transition: all 0.5s;
+  }
+
 

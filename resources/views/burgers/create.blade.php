@@ -2,40 +2,47 @@
 @section('content')
 <div class="full-height">
     <div class="wrapper">
-        <h1>
-            Składanie zamówenia
+        <h1 class="title flex-center">
+            Zamówienie
         </h1>
-        <form action="/burger" method="POST">
-            @csrf
-            <label for="Imię">Imię:</label>
-            <input type="text" id="Imię" name="Imię">
-            <label for="Nazwisko">Nazwisko:</label>
-            <input type="text" id="Nazwisko" name="Nazwisko">
-            <label for="Rodzaj">Wybierz burgera: </label>
-            <select name="Rodzaj" id="Rodzaj">
-                <option value="Classic">Classic</option>
-                <option value="Bebek-Junior">Bebek Junior</option>
-            </select>
-            <label for="Bułka">Bułka: </label>
-            <select name="Bułka" id="Bułka">
-                <option value="Pszenna">Pszenna</option>
-                <option value="Maślana">Maślana</option>
-            </select>
-            <fieldset>
-                <label>Dodatki:</label>
-                <input type="checkbox" name="dodatki" value="Burger-wołowy">Burger wołowy 180g
-                <input type="checkbox" name="dodatki[]" value="Ser-smażony">Ser smażony
-                <input type="checkbox" name="dodatki[]" value="Burger-wieprzowy">Burger wieprzowy
-                <input type="checkbox" name="dodatki[]" value="Jajko">Jajko
-                <input type="checkbox" name="dodatki[]" value="Becon">Becon
-                <input type="checkbox" name="dodatki[]" value="Ser">Ser
-                <input type="checkbox" name="dodatki[]" value="Nachosy">Nachosy
-            </fieldset>
-            <input type="submit" value="Zamów">
-        </form>
-        <a href="/">
-            <- Powrót do strony głównej
-        </a>
+        <div class="flex-center">
+            <div class="center g">
+                <form action="/burger" method="POST">
+                    @csrf
+                    <div class="content">
+                        <div class="z">
+                            <label for="Imię">Imię:
+                                <input type="text" id="Imię" name="Imię">
+                            </label>
+                            <label for="Nazwisko">Nazwisko:
+                                <input type="text" id="Nazwisko" name="Nazwisko">
+                            </label>
+                            <label for="Rodzaj">Wybierz burgera: 
+                                <select name="Rodzaj" id="Rodzaj">
+                                    @foreach ($menus as $menu)
+                                    <option value="{{$menu->Rodzaj}}">{{$menu->Rodzaj}}-{{$menu->Cena}}</option>            
+                                    @endforeach
+                                </select>
+                            </label>
+                        </div>
+                        <label>Dodatki:</label>
+                        <div class="dodatki content">
+                                <input type="checkbox" name="dodatki" value="Burger-wołowy">Burger wołowy 180g
+                                <input type="checkbox" name="dodatki[]" value="Ser-smażony">Ser smażony
+                                <input type="checkbox" name="dodatki[]" value="Burger-wieprzowy">Burger wieprzowy
+                                <input type="checkbox" name="dodatki[]" value="Jajko">Jajko
+                                <input type="checkbox" name="dodatki[]" value="Becon">Becon
+                                <input type="checkbox" name="dodatki[]" value="Ser">Ser
+                                <input type="checkbox" name="dodatki[]" value="Nachosy">Nachosy
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Zamów">
+                    </div>
+                </form>
+        </div>
+        </div>
     </div>
+    
 </div>
 @endsection

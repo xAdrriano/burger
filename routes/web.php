@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::get('/burger/menu',[MenuController::class, 'index'])->name('burgers.index');
 Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
+Route::get('/burger/zamow',[MenuController::class, 'create'])->name('burgers.create');
 Route::post('/burger',[BurgerController::class, 'store'])->name('burgers.store');

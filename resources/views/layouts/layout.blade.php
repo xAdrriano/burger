@@ -32,6 +32,11 @@
                 <img src="/img/up-arrow.png"  width="80" src="do-góry">
               </a>
           </div>
+          <div class="back">
+            <a href="/">
+              <img src="/img/logo-burger.png"  width="80" src="powrot">
+            </a>
+        </div>
       @yield('content')
       <footer>
         <a href="/">

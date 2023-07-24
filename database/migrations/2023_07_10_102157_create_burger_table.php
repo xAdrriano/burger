@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('Imię');
             $table->string('Nazwisko');
             $table->string('Rodzaj');
-            $table->string('Rozmiar');
-            $table->string('Bułka');
             $table->json('dodatki');
             $table->timestamps();
         });
