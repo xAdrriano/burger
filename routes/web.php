@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/burger/menu',[MenuController::class, 'index'])->name('burgers.index');
+Route::get('/burger/zamow',[BurgerController::class, 'create'])->name('burgers.create');
+Route::get('/burger/zamow',[MenuController::class, 'create'])->name('burgers.create');
+Route::post('/burger',[BurgerController::class, 'store'])->name('burgers.store');
+Route::get('/burger/menu/{id}',[MenuController::class, 'show'])->name('burgers.show');
+
