@@ -1,3 +1,8 @@
+@if(session()->has('mssg'))
+<div id="mssg">
+    <p>{{session('mssg')}}</p>
+</div>
+@endif
 @extends('layouts.layout')
 @section('content')
 <div class="flex-center position-ref full-height">
@@ -6,9 +11,7 @@
         <div class="title m-b-md">
             Najlepsze burgiry w mieście!
         </div>
-        @if(session()->has('mssg'))
-            <p>{{session('mssg')}}</p>
-        @endif
     </div>
 </div>
 @endsection
+

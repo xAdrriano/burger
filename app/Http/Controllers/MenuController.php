@@ -21,4 +21,9 @@ class MenuController extends Controller
             'menus' => $menus
         ]);
     }
+
+    public function show($id) {
+        $menus = Menu::FindOrFail($id);
+        return view('burgers.show',['menu' => $menus]);
+    }
 }
