@@ -24,6 +24,13 @@ html, body {
   
   .flex {
     display: flex;
+    margin: 15px;
+  }
+
+  .flex > label {
+    margin: 5px;
+    width: 30%;
+    text-align: right;
   }
 
   .position-ref {
@@ -51,24 +58,53 @@ html, body {
   }
   
   .z {
-    margin: 30px;
+    margin: 15px;
     display: grid;
   }
 
   .z > label {
-    padding-top: 15px;
+    margin: 5px;
+    width: 30%;
+    text-align: right;
   }
 
   .input {
-    border: #afca0b solid 2px;
+    border: #afca0b solid 1px;
+    width: 50%;
+    border-radius: 0.375rem;
     padding: 5px;
+    height: 20px;
   }
 
   .select {
-    border: #afca0b solid 2px;
-    padding: 5px;
+    border: #afca0b solid 1px;
+    width: 52%;
+    border-radius: 0.375rem;
+    padding: 5px; 
   }
-  
+
+  .right {
+    float: right;
+    text-align: right;
+    justify-content: end;
+  }
+
+  .half {
+    width: 48%;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   footer{
     background: black;
     padding: 20px;
@@ -188,7 +224,7 @@ html, body {
   .g {
     background: #F4F4F4; 
     border: solid #afca0b 2px;
-    border-radius: 50px / 60px;
+    border-radius: 0.375rem;
     color: black;
     transition: all 1s;
   }
@@ -205,7 +241,7 @@ html, body {
   }
   .dodatki {
     border: 2px solid #afca0b;
-    border-radius: 15px;
+    border-radius: 0.375rem;
     background-color: #F1F1f1;
     padding: 20px;
     margin-left: 10px;
@@ -310,4 +346,45 @@ html, body {
 
   @keyframes cssAnimation {
     to {opacity: 0;}
+  }
+
+  #error-mssg {
+    color: red;
+    text-align: center;
+    font-size: x-small;
+  }
+
+  .margin-top {
+    margin-top: 150px;
+  }
+
+  .border {
+    border: #afca0b solid 1px !important;
+  }
+
+  .border-bottom {
+    border-bottom: #afca0b solid 1px !important ;
+  }
+
+  .btn-color {
+    background-color: #afca0b;
+    border: 3px #afca0b solid;
+    transition: all 0.5s;
+  }
+
+  .btn-color:hover {
+    background-color: #74b602;
+    border: #74b602 3px solid;
+    transition: all 0.5s;
+  }
+
+  .log-input  > input,select{
+    border: #afca0b 1px solid;
+  }
+
+  .log-input > input:focus,select:focus {
+    border: #74b602 1px solid;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
+    box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
   }

@@ -25,3 +25,7 @@ Route::get('/burger/zamow',[MenuController::class, 'create'])->name('burgers.cre
 Route::post('/burger',[BurgerController::class, 'store'])->name('burgers.store');
 Route::get('/burger/menu/{id}',[MenuController::class, 'show'])->name('burgers.show');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
