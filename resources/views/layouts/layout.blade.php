@@ -49,6 +49,11 @@
                       </a>
                 @endif
             @else
+                    <a href="/burger/lista-zamówień">
+                      <div class="m-button">
+                        Lista zamównień
+                      </div>
+                    </a>
                     <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
@@ -58,6 +63,7 @@
                                          <div class="m-button">
                                           {{ __('Wyloguj') }}
                                          </div>
+                                         
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf

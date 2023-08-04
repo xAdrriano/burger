@@ -48,7 +48,7 @@
                         </div>
                         <label>Dodatki:</label>
                         <div class="dodatki content">
-                                <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wołowy">Burger wołowy 180g
+                                <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wolowy">Burger wołowy 180g
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Ser-smazony">Ser smażony
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wieprzowy">Burger wieprzowy
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Jajko">Jajko

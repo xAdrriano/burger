@@ -232,6 +232,9 @@ html, body {
   .g:hover {
     transition: all 0.5s;
     background-color: #E1E1E1;
+    -webkit-box-shadow: 0px 0px 10px 0px #afca0b;
+    -moz-box-shadow: 0px 0px 10px 0px #afca0b;
+    box-shadow: 0px 0px 10px 0px #afca0b;
   }
 
   .center {
@@ -246,6 +249,31 @@ html, body {
     padding: 20px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .li > li{
+    margin: 16px 10px;
+  }
+
+  .button-delete {
+    margin-top: auto;
+    width: 30%;
+  }
+
+  .button-delete > input {
+    border: 2px solid #afca0b;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 200px;
+  }
+
+  .button-delete > input:hover {
+    background-color: #afca0b;
+    transition: all 0.5s;
   }
 
   .button {
@@ -387,4 +415,17 @@ html, body {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
     -moz-box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
     box-shadow: 0px 0px 10px 0px rgba(116, 182, 2, 1);
+  }
+
+
+  .l-z {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .l-z > a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
   }

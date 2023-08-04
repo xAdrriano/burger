@@ -35,7 +35,7 @@
     
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>Ten email jest zajęty.</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -49,7 +49,7 @@
     
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>Hasło musi składać się z 8 znaków.</strong>
                                         </span>
                                     @enderror
                                 </div>

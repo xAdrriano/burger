@@ -7,6 +7,20 @@ use App\Models\Burger;
 
 class BurgerController extends Controller
 {
+
+    public function index(){
+        $burger = Burger::all();
+        return view('burgers.index',[
+            'burgers' => $burger
+        ]);
+    }
+
+    public function show($id){
+        $burger = Burger::FindOrFail($id);
+        return view('burgers.show',['burger' => $burger]);
+    }
+
+
     public function create(){
         return view('burgers.create');
     }
@@ -33,5 +47,10 @@ class BurgerController extends Controller
             }
     }
 
+    public function destroy($id){
+        $burger = Burger::findOrFail($id);
+        $burger -> delete();
+        return redirect('/burger/lista-zamówień');
+    }
 }
 
