@@ -17,13 +17,13 @@ class MenuController extends Controller
     
     public function index(){
         $menus = Menu::all();
-        return view('burgers.index',[
+        return view('menus.index',[
             'menus' => $menus
         ]);
     }
 
     public function show($id) {
         $menus = Menu::FindOrFail($id);
-        return view('burgers.show',['menu' => $menus]);
+        return view('menus.show',['menu' => $menus]);
     }
 }

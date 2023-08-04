@@ -11,28 +11,44 @@
                     @csrf
                     <div class="content">
                         <div class="z">
-                            <label for="Imię">
-                                Imię:
-                                <input class="input" type="text" id="Imię" name="Imię">
-                            </label>
-                            <label for="Nazwisko">
-                                Nazwisko:
-                                <input class="input" type="text" id="Nazwisko" name="Nazwisko">
-                            </label>
-                            <label for="Rodzaj">
-                                Wybierz burgera: 
-                                <select class="select" name="Rodzaj" id="Rodzaj">
-                                    @foreach ($menus as $menu)
-                                    <option value="{{$menu->Rodzaj}}">
-                                        {{$menu->Rodzaj}}-{{$menu->Cena}}
-                                    </option>            
-                                    @endforeach
-                                </select>
-                            </label>
+                            <div class="log-input flex">
+                                <label for="Imię">
+                                    Imię:
+                                </label>
+                                    <input class="input" type="text" id="Imię" name="Imię">
+                                    @if(session()->has('error-mssg'))
+                                    <div id="error-mssg">
+                                        <p>{{session('error-mssg')}}</p>
+                                    </div>
+                                    @endif
+                            </div>
+                            <div class="log-input flex">
+                                <label for="Nazwisko">
+                                    Nazwisko:
+                                </label>
+                                    <input class="input" type="text" id="Nazwisko" name="Nazwisko">
+                                    @if(session()->has('error-mssg'))
+                                    <div id="error-mssg">
+                                        <p>{{session('error-mssg')}}</p>
+                                    </div>
+                                    @endif
+                            </div>
+                            <div class="log-input flex">
+                                <label for="Rodzaj">
+                                    Wybierz burgera: 
+                                </label>
+                                    <select class="select" name="Rodzaj" id="Rodzaj">
+                                        @foreach ($menus as $menu)
+                                        <option value="{{$menu->Rodzaj}}">
+                                            {{$menu->Rodzaj}}-{{$menu->Cena}}
+                                        </option>            
+                                        @endforeach
+                                    </select>
+                            </div>
                         </div>
                         <label>Dodatki:</label>
                         <div class="dodatki content">
-                                <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wołowy">Burger wołowy 180g
+                                <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wolowy">Burger wołowy 180g
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Ser-smazony">Ser smażony
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Burger-wieprzowy">Burger wieprzowy
                                 <input type="checkbox" id="dodatki[]" name="dodatki[]" value="Jajko">Jajko
@@ -48,6 +64,5 @@
         </div>
         </div>
     </div>
-    
 </div>
 @endsection

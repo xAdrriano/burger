@@ -1,46 +1,41 @@
 @extends('layouts.layout')
 @section('content')
-<div class="flex">
-    <div class="full-height">
-        <div class="">
-            <img src="{{$menu->img}}" width="886px" alt="Rodzaj">
-        </div>
-    </div>
-    <div class=""> 
-        <div class="back-to-menu margin-50-5 content">
-            <a href="/burger/menu">
-                <div>
-                    << Wróć do menu
+<div class="full-height">
+    <div class="wrapper">
+        <h1 class="flex-center title">
+            Zamównienie - {{$burger->id}}
+        </h1>
+        <div class="flex border container l-z g">
+                <p class="flex-center">
+                    {{$burger->Imię}}
+                    {{$burger->Nazwisko}} - {{$burger->Rodzaj}} -
+                
+                @if($burger->dodatki == ["brak dodatkow"])
+                        Brak dodatków
+                @else
+                        Extra dodatki:
+                    <ul class="li">
+                        @foreach ($burger->dodatki as $dodatek)
+                            <li>
+                               {{$dodatek}}
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+                </p>
+                <div class="flex-center">
+                    <form action="{{route('burgers.delete',$burger->id)}}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <div class="button-delete">
+                            <input type="submit" value="Zamówienie wydane">
+                        </div>
+                        </form>
                 </div>
-            </a>
         </div>
-        <div class="flex-center">
-            <div class="nazwa margin-50-5 content">
-                {{$menu->Rodzaj}}
-            </div> 
-        </div>
-        <div class="margin-50-5">
-            <h1>
-                Skład:
-            </h1>
-        </div> 
-        <div class="margin-50-5 Opis">
-            <h3>
-                {{$menu->Opis}} 
-            </h3>
-        </div> 
-        <div class="flex-center">
-            <div class="cena margin-50-5 content">
-                {{$menu->Cena}} PLN
-            </div>
-        </div>
-        <div class="back-to-menu margin-50-5 content">
-            <a href="/burger/zamow">
-                <div>
-                    Zamów online >>
-                </div> 
-            </a>
-        </div>
+        <a href="/burger/lista-zamówień" class="l-z back-to-menu">
+            <- Powrót do listy Zamóweń
+        </a>
     </div>
 </div>
 @endsection

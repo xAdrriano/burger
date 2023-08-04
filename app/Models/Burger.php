@@ -12,4 +12,4 @@ class Burger extends Model
     protected $casts = [
         'dodatki' => 'array'
     ];
-};
+}
